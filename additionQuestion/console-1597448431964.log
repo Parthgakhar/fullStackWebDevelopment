@@ -1,0 +1,26 @@
+function add() {
+   var sum = 0;
+    for(let i=0;i<arguments.length;i++){
+        if(typeof arguments[i]=="function"){
+            arguments[i] = arguments[i]();
+        }
+        sum += isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+    }
+        return sum;
+}
+function five() {
+    return 5;
+}
+undefined
+add()
+0
+add(1,2)
+3
+add(1,2,3)
+6
+add(1,2,3,"4")
+10
+add(1,2,3,"4","ten")
+10
+add(1,2,3,"4","ten",five)
+15
