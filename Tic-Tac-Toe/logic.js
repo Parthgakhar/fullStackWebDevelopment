@@ -1,4 +1,4 @@
-'use strict'
+
 let activePlayer;
 let cells = document.querySelectorAll(".cell");
 let status = document.querySelector(".status");
