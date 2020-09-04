@@ -81,8 +81,8 @@ function handleBracket(e) {
     
     //Condition when there is a open bracket
     if (input == '(') {
-        //When expression is in ALl-clear state i.e. 0, then open-bracket will replace it
-        if (expression.value == '0') {
+        //When expression is in ALl-clear state i.e. 0 or ERROR, then open-bracket will replace it
+        if (expression.value == '0' || expression.value =='ERROR') {
             expression.value = '('
         }
         else if (expression.value != '0') {
